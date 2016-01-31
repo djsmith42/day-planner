@@ -1,5 +1,5 @@
 var path = require('path');
-var NpmInstallPlugin = require('npm-install-webpack-plugin');
+var NpmInstallPlugin = require('npm-install-webpack-plugin')
 
 module.exports = {
   entry: './app/index.js',
@@ -18,8 +18,8 @@ module.exports = {
         include: path.resolve(__dirname, "app") // must be fully qualified file path
       }
     ],
-    plugins: [
-      new NpmInstallPlugin()
-    ],
   },
+  plugins: [
+    new NpmInstallPlugin() // auto installs npm modules and restarts webpack
+  ],
 };
